@@ -8,6 +8,7 @@ public class Personnage : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;
     public Camera cam;
+    Vector3 PositionMouse;
     
 
 
@@ -22,7 +23,9 @@ public class Personnage : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
-        transform.LookAt(cam.ScreenToWorldPoint(Input.mousePosition), -Vector3.forward);
+        PositionMouse = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        transform.LookAt(PositionMouse, -Vector3.forward);
         transform.Rotate(new Vector3(90, 0, 0), Space.Self);
     }
 
