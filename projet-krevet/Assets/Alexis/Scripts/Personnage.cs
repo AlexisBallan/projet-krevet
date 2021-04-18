@@ -24,9 +24,10 @@ public class Personnage : MonoBehaviour
         movement.y = Input.GetAxis("Vertical");
 
         PositionMouse = cam.ScreenToWorldPoint(Input.mousePosition);
+        PositionMouse.z = 90;
 
         transform.LookAt(PositionMouse, -Vector3.forward);
-        transform.Rotate(new Vector3(90, 0, 0), Space.Self);
+        transform.Rotate(new Vector3(0, 0, 0), Space.Self);
     }
 
     private void FixedUpdate()
