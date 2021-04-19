@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ChangeWeapons : MonoBehaviour
 {
-    private GameObject ActualWeapon;
-
+    public GameObject ActualWeapon;
+    public GameObject Player;
 
     private void Awake()
     {
-        ActualWeapon = null;
+        
     }
 
     public void ChangeWeapon(GameObject NewWeapon)
@@ -18,5 +18,4 @@ public class ChangeWeapons : MonoBehaviour
         ActualWeapon = NewWeapon;
         Instantiate(ActualWeapon);
     }
-
 }

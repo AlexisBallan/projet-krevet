@@ -613,6 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf870d89af08b0439025161a9081c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 2081294785}
   WeaponChange: {fileID: 8064737548562813764, guid: 3127b2f4c2c359a44a2dd1658018f9de, type: 3}
 --- !u!1 &1027844764
 GameObject:
@@ -680,6 +681,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1257857108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2081294790}
+    m_Modifications:
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.01922357
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000034822715
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000066954067
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9998152
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 2.203
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 78376582114678449, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+      propertyPath: m_Name
+      value: Weapon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+--- !u!1 &1257857109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 78376582114678449, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+  m_PrefabInstance: {fileID: 1257857108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1257857110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 78376582114678448, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
+  m_PrefabInstance: {fileID: 1257857108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855045163
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf870d89af08b0439025161a9081c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 2081294785}
   WeaponChange: {fileID: 78376582114678449, guid: e36e26f9ba683ec448985c7cc7ace13b, type: 3}
 --- !u!1 &2081294785
 GameObject:
@@ -868,7 +937,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &2081294787
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -944,7 +1013,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1257857110}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -975,3 +1045,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dbb89608823890419ba226f1b3e15ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActualWeapon: {fileID: 1257857109}
+  Player: {fileID: 2081294785}

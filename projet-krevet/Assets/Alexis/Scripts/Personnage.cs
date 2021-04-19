@@ -9,14 +9,6 @@ public class Personnage : MonoBehaviour
     Vector2 movement;
     public Camera cam;
     Vector3 PositionMouse;
-    
-
-
-    private void Start()
-    {
-        
-    }
-
 
     private void Update()
     {
@@ -33,7 +25,5 @@ public class Personnage : MonoBehaviour
     private void FixedUpdate()
     {
         gameObject.transform.position = new Vector2(transform.position.x + (movement.x * Speed), transform.position.y + (movement.y * Speed));
-
-       
     }
 }

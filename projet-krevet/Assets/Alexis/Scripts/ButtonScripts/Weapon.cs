@@ -6,8 +6,13 @@ public class Weapon : MonoBehaviour
 {
     private ChangeWeapons ChangeWeapon;
 
+    public GameObject Player;
     public GameObject WeaponChange;
 
+    private void Start()
+    {
+        ChangeWeapon = Player.GetComponent<ChangeWeapons>();
+    }
 
     public void WeaponToChange()
     {
