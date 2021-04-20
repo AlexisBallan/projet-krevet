@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
         ChangeWeapon = Player.GetComponent<ChangeWeapons>();
     }
 
+  
+
     public void WeaponToChange()
     {
         ChangeWeapon.ChangeWeapon(WeaponChange);
